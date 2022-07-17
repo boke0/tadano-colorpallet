@@ -53,8 +53,11 @@ const Home: NextPage = () => {
     setSelectedPallet(palletState.pallets[tabIndex].id)
   }
   const addPallet = () => {
+    const id = uuid()
+    setSelectedPallet(id)
     palletDispatch({
       type: 'ADD_PALLET',
+      id,
       name: 'ただのパレット' + (palletState.pallets.length+1)
     })
   }

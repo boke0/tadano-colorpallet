@@ -29,6 +29,7 @@ interface UpdateCellAction {
 
 interface AddPalletAction {
   type: 'ADD_PALLET';
+  id: string;
   name: string;
 }
 
@@ -125,7 +126,7 @@ const PalletReducer: Reducer<PalletState, PalletAction> = (state: PalletState, a
         pallets: [
           ...state.pallets,
           {
-            id: uuid(),
+            id: action.id,
             name: action.name,
             cells: [
               {
