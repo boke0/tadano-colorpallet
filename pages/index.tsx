@@ -128,7 +128,7 @@ const Home: NextPage = () => {
       type: 'REMOVE_PALLET',
       palletId,
     })
-    setSelectedPallet(palletState.pallets[palletIndex - 1].id)
+    setSelectedPallet(palletState.pallets[Math.max(palletIndex - 1, 0)].id)
   }
   const { isOpen, onClose, onOpen } = useDisclosure()
   const [scss, setScss] = useState('');
