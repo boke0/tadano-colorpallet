@@ -68,7 +68,7 @@ const CellCard = ({
         >
           コピー
         </Button>
-        <IconButton aria-label='削除' colorScheme='red' onClick={() => onRemove()}>
+        <IconButton aria-label='削除' colorScheme='red' onClick={() => onRemove ? onRemove() : false}>
           <DeleteIcon />
         </IconButton>
       </Box>
