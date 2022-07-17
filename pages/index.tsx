@@ -21,9 +21,9 @@ const Header = styled.div`
 `
 
 const title = "何の変哲もない、ただのカラーパレット"
-const url = "https://tadano-pallet.boke0ya.com"
+const url = "https://tadano-colorpallet.boke0ya.com"
 const description = "他の人が考えた色の組み合わせとか、AIが考えてくれた色とか、理論的に絶妙な配色とか、そういうのが出てこない、ただのパレットです。"
-const imgUrl = "https://tadano-pallet.boke0ya.com/ogp.png"
+const imgUrl = "https://tadano-colorpallet.boke0ya.com/ogp.png"
 const imgWidth = 1200
 const imgHeight = 630
 
