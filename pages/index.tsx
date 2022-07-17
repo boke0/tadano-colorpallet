@@ -124,11 +124,11 @@ const Home: NextPage = () => {
   const removePallet = () => {
     const palletId = selectedPallet ?? palletState.pallets[0].id
     const palletIndex = palletState.pallets.findIndex(pallet => pallet.id === palletId)
-    setSelectedPallet(palletState.pallets[palletIndex - 1].id)
     palletDispatch({
       type: 'REMOVE_PALLET',
       palletId,
     })
+    setSelectedPallet(palletState.pallets[palletIndex - 1].id)
   }
   const { isOpen, onClose, onOpen } = useDisclosure()
   const [scss, setScss] = useState('');
