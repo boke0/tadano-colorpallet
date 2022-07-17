@@ -143,7 +143,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>title</title>
+        <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content={description} />
         <meta property="og:url" content={url} />
