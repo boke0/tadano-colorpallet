@@ -131,7 +131,7 @@ const PalletReducer: Reducer<PalletState, PalletAction> = (state: PalletState, a
             cells: [
               {
                 id: uuid(),
-                name: '白',
+                name: 'color-0',
                 color: '#ffffff'
               }
             ]
