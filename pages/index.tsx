@@ -128,7 +128,6 @@ const Home: NextPage = () => {
       type: 'REMOVE_PALLET',
       palletId,
     })
-    console.log(palletIndex, palletState.pallets.length, palletState.pallets[Math.min(palletState.pallets.length - 2, Math.max(palletIndex - 1, 0))])
     setSelectedPallet(palletState.pallets[Math.min(palletState.pallets.length - 2, Math.max(palletIndex - 1, 0))].id)
   }
   const { isOpen, onClose, onOpen } = useDisclosure()
@@ -170,7 +169,7 @@ const Home: NextPage = () => {
       <Header>
         <Image src='/title.png' alt='何の変哲もない、ただのカラーパレット' width={240} height={96} />
       </Header>
-      <Tabs onChange={changeTab} mt={4} index={selectedPallet ? palletState.pallets.findIndex(pallet => pallet.id === selectedPallet) : 0}>
+      <Tabs onChange={changeTab} mt={4} index={selectedPallet ? palletState.pallets.findIndex(pallet => pallet.id === selectedPallet) ?? 0 : 0}>
         <TabList>
           {palletState.pallets.map((pallet: Pallet) => {
             return (
